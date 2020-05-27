@@ -1,0 +1,13 @@
+<?xml version="1.0"?>
+<launch>
+    <arg name="pcd_file" default="$(find reto_ros)/pcd/office.pcd"/>
+    <arg name="rate" default ="0.1"/>
+    <arg name="frame_id" default="/odom"/>
+    <arg name="rvizconfig" default="$(find reto_ros)/rviz/reto_pcl.rviz"/>
+
+    <node pkg="reto_ros" type="pcl_to_pointcloud" args="$(arg pcd_file) $(arg rate)" name="reto_pcl_to_pointcloud">
+        <param name="frame_id" value="$(arg frame_id)" />
+    </node>
+
+    <node name="rviz" pkg="rviz" type="rviz" args="-d $(arg rvizconfig)" required="true" />
+</launch>
