@@ -1,6 +1,9 @@
-#Ignore files
+#Ignore Dir
 .vscode/
 .catkin_tools/
 build/
 devel/
 logs/
+
+#Ignore files
+*.pdf
