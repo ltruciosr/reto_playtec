@@ -55,4 +55,10 @@ roslaunch reto_ros reto_pcd.launch
 ```
 ![](check_cloud.gif)
 
-
+### 2.4 Visualize non-static PCD
+Al poder definir el frame de referencia de la nube de puntos (PointCloud2), usaremos el frame final del brazo robotico __/arm_2__ como el frame de referencia.\
+Combinamos los puntos __2.3__ y __2.4__ para obtener el siguiente archivo launch.
+```
+roslaunch reto_ros reto_pcd_mobile.launch
+```
+![](move_cloud.gif)
